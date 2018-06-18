@@ -4,7 +4,7 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-console.log('this loads');
+console.log("this loads");
 
 (function($) {
 
@@ -152,7 +152,7 @@ console.log('this loads');
 					'<a href="#navPanel" class="close"></a>' +
 				'</div>'
 			)
-				.appendTo($body);
+				.appendTo($body)
 				.panel({
 					delay: 500,
 					hideOnClick: true,
