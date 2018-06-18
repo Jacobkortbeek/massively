@@ -4,7 +4,7 @@
 			<div id="wrapper" class="fade-in">
 
 				<!-- Intro -->
-					<div id="intro">
+					<div id="intro" class="hidden">
 						<h1>This is<br />
 						Massively</h1>
 						<p>A free, fully responsive HTML5 + CSS3 site template designed by <a href="https://twitter.com/ajlkn">@ajlkn</a> for <a href="https://html5up.net">HTML5 UP</a><br />
@@ -15,7 +15,7 @@
 					</div>
 
 				<!-- Header -->
-					<header id="header" class="hidden">
+					<header id="header">
 						<a href="index.html" class="logo">Massively</a>
 					</header>
 
