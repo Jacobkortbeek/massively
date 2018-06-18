@@ -145,6 +145,7 @@ console.log("this loads");
 				});
 
 		// Panel.
+		jQuery(document).ready(function($) {
 			$navPanel = $(
 				'<div id="navPanel">' +
 					'<nav>' +
@@ -163,7 +164,7 @@ console.log("this loads");
 					target: $body,
 					visibleClass: 'is-navPanel-visible'
 				});
-
+} );
 			// Get inner.
 				$navPanelInner = $navPanel.children('nav');
 
