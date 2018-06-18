@@ -1,11 +1,25 @@
 {
   "name": "massively",
   "version": "1.0.0",
-  "description": "a wordpress theme dev site",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jacobkortbeek/massively.git"
+  },
   "author": "jacob kortbeek",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jacobkortbeek/massively/issues"
+  },
+  "homepage": "https://github.com/Jacobkortbeek/massively#readme",
+  "devDependencies": {
+    "flightplan": "^0.6.17",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^4.0.1"
+  }
 }
