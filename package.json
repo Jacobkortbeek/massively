@@ -1,0 +1,11 @@
+{
+  "name": "massively",
+  "version": "1.0.0",
+  "description": "a wordpress theme dev site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jacob kortbeek",
+  "license": "ISC"
+}
