@@ -15,7 +15,7 @@
 					</div>
 
 				<!-- Header -->
-					<header id="header">
+					<header id="header" class="hidden">
 						<a href="index.html" class="logo">Massively</a>
 					</header>
 
