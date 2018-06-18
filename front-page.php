@@ -14,7 +14,7 @@
 
 				<!-- Header -->
 					<header id="header">
-						<a href="index.html" class="logo">Kortbeek</a>
+						<a href="index.html" class="logo"><?php the_field( 'logo_text' ); ?></a>
 					</header>
 
 				<!-- Nav -->
