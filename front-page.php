@@ -14,7 +14,7 @@
 
 				<!-- Header -->
 					<header id="header">
-						<a href="index.html" class="logo">Massively</a>
+						<a href="index.html" class="logo">Kortbeek</a>
 					</header>
 
 				<!-- Nav -->
