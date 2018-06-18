@@ -152,7 +152,7 @@ console.log("this loads");
 					'<a href="#navPanel" class="close"></a>' +
 				'</div>'
 			)
-				.append($(body).$val())
+				.appendTo($body);
 				.panel({
 					delay: 500,
 					hideOnClick: true,
