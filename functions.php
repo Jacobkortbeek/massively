@@ -8,7 +8,7 @@
   add_action( 'wp_enqueue_scripts', 'wpt_theme_styles' );
 
   function wpt_theme_js() {
-    wp_enqueue_script( 'breakpoint', get_template_directory_uri() . '/assets/js/breakpoint.min.js', array('jquery'), ' ', true);
+    wp_enqueue_script( 'breakpoint', get_template_directory_uri() . '/assets/js/breakpoint.min.js', true);
     wp_enqueue_script( 'browser_js', get_template_directory_uri() . '/assets/js/browser.min.js', array('jquery'), ' ', true );
     wp_enqueue_script( 'jqscrollex_js', get_template_directory_uri() . '/assets/js/jquery.scrollex.min.js', array('jquery'), ' ', true );
     wp_enqueue_script( 'jqscrolly_js', get_template_directory_uri() . '/assets/js/jquery.scrolly.min.js', array('jquery'), ' ', true );
