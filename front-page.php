@@ -72,7 +72,8 @@
 
 						  $args = array(
 						    'post_type' => 'post',
-						    'posts_per_page' => $num_posts
+						    'posts_per_page' => $num_posts,
+								'orderby' => 'post_date'
 						  );
 
 						  $query = new WP_Query( $args );
@@ -102,7 +103,7 @@
 						<section class="posts test">
 							<?php if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); ?>
 							<article class="resr">
-								<header>
+								<header class="<?php post_class( 0 === $featured_posts->current_post ? 'first' : '' ); ?>">
 									<span class="date"><?php the_date('Y-m-d'); ?></span>
 									<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 								</header>
