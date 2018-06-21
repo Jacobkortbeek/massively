@@ -103,7 +103,7 @@
 								<?php $i=0; if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); ?>
 									<?php if($i==0): ?>
 										<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-									<?php elseif: ?>
+									<?php elseif ?>
 								<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 
 								<?php endif; $i++; endwhile; endif; wp_reset_postdata(); ?>
