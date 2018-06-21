@@ -101,9 +101,9 @@
 
 						<!-- Posts -->
 						<section class="posts">
-							<?php $i=0; if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); ?>
+							<?php if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); ?>
 							<article class="resr">
-								<header <?php echo ($i==0)?'class="major"':''; ?>
+								<header>
 									<span class="date"><?php the_date('Y-m-d'); ?></span>
 									<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 								</header>
@@ -114,7 +114,7 @@
 								</ul>
 							</article>
 
-							<?php $i++; endwhile; endif; wp_reset_postdata(); ?>
+							<?php endwhile; endif; wp_reset_postdata(); ?>
 						</section>
 
 							<section class="posts">
