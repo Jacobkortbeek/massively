@@ -115,30 +115,27 @@
 													<li><a href="#" class="button large">Full Story</a></li>
 												</ul>
 											</article>
+											<section class="posts">
 									<?php $i++; else: ?>
-								<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+										
+											<article>
+												<header>
+													<span class="date"><?php the_date('Y-m-d'); ?> test</span>
+													<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+												</header>
+												<a href="<?php the_permalink(); ?>" class="image fit"><?php the_post_thumbnail( 'medium' ); ?></a>
+												<p><?php the_excerpt(); ?></p>
+												<ul class="actions special">
+													<li><a href="<?php the_permalink(); ?>" class="button">Full Story</a></li>
+												</ul>
+											</article>
 
 								<?php endif; endwhile; endif; wp_reset_postdata(); ?>
-
+							</section>
 
 
 						<!-- Posts -->
-						<section class="posts">
-							<?php if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); ?>
-							<article class="post">
-								<header>
-									<span class="date"><?php the_date('Y-m-d'); ?> test</span>
-									<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-								</header>
-								<a href="<?php the_permalink(); ?>" class="image fit"><?php the_post_thumbnail( 'medium' ); ?></a>
-								<p><?php the_excerpt(); ?></p>
-								<ul class="actions special">
-									<li><a href="<?php the_permalink(); ?>" class="button">Full Story</a></li>
-								</ul>
-							</article>
 
-							<?php endwhile; endif; wp_reset_postdata(); ?>
-						</section>
 
 							<section class="posts">
 								<article>
