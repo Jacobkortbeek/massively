@@ -101,11 +101,11 @@
 
 						<!-- Posts -->
 						<section class="posts test">
-							<?php if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); ?>
+							<?php
+							$i=0;
+							 if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); ?>
 							<article class="resr">
-								<header <?php if( $wp_query->current_post == $wp_query->post_count-1 ): ?>
-									class="major"
-								<?php endif; ?>>
+								<header <?php echo ($i==0)?'active':''; ?>>
 									<span class="date"><?php the_date('Y-m-d'); ?></span>
 									<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 								</header>
@@ -115,7 +115,8 @@
 									<li><a href="<?php the_permalink(); ?>" class="button">Full Story</a></li>
 								</ul>
 							</article>
-							<?php endwhile; endif; wp_reset_postdata(); ?>
+
+							<?php $i++ endwhile; endif; wp_reset_postdata(); ?>
 						</section>
 
 							<section class="posts">
