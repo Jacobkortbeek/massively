@@ -16,6 +16,10 @@
 					<header id="header">
 						<a href="index.html" class="logo"><?php the_field( 'logo_text' ); ?></a>
 						<p><?php the_field('twitter', 'options'); ?></p>
+						<p><?php the_field('facebook', 'options'); ?></p>
+						<p><?php the_field('instagram', 'options'); ?></p>
+						<p><?php the_field('github', 'options'); ?></p>
+						<p><?php the_field('social_media', 'options'); ?></p>
 					</header>
 
 				<!-- Nav -->
