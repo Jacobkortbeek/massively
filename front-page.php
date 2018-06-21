@@ -37,7 +37,15 @@
 							<li><a href="elements.html">Elements Reference</a></li>
 						</ul> -->
 						<ul class="icons">
-							
+							<p><?php $twitter = get_field('twitter', 'options'); ?></p>
+							<?php
+								$social = get_field('social_media', 'options');
+
+								if( $social ): ?>
+									<?php $twitter = get_field('twitter'); ?>
+								<?php else: ?>
+								<p>This is not here</p>
+									<?php endif; ?>
 							<!-- Make these if statements for the options social media panel -->
 							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
 							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
