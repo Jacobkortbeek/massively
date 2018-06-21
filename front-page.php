@@ -41,15 +41,31 @@
 							<li><a href="elements.html">Elements Reference</a></li>
 						</ul> -->
 						<ul class="icons">
+							<!-- twitter -->
 							<?php $twitter = get_field('twitter', 'options');
 								if( $twitter ): ?>
 									<li><a href="<?php the_field('twitter', 'options'); ?>" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
 							<?php endif; ?>
+							<!-- Facebook -->
+							<?php $facebook = get_field('facebook', 'options');
+								if( $facebook ): ?>
+									<li><a href="<?php the_field('facebook', 'options'); ?>" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+							<?php endif; ?>
+							<!-- Instagram -->
+							<?php $instagram = get_field('instagram', 'options');
+								if( $instagram ): ?>
+									<li><a href="<?php the_field('instagram', 'options'); ?>" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+							<?php endif; ?>
+							<!-- github -->
+							<?php $github = get_field('github', 'options');
+								if( $github ): ?>
+									<li><a href="<?php the_field('github', 'options'); ?>" class="icon fa-github"><span class="label">github</span></a></li>
+							<?php endif; ?>
 							<!-- Make these if statements for the options social media panel -->
-							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+							<!-- <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
 							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
 							<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li> -->
 						</ul>
 					</nav>
 
