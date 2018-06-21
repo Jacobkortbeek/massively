@@ -16,7 +16,7 @@
 					<header id="header">
 						<a href="index.html" class="logo"><?php the_field( 'logo_text' ); ?></a>
 						<p><?php the_field('twitter', 'options'); ?> twitter</p>
-						<p><?php get_field('facebook', 'options'); ?> facebook</p>
+						<p><?php the_field('facebook', 'options'); ?> facebook</p>
 						<p><?php the_field('instagram', 'options'); ?> instagram</p>
 						<p><?php the_field('github', 'options'); ?> github</p>
 					</header>
