@@ -3701,15 +3701,15 @@ input, select, textarea {
 						background-color: rgba(255, 255, 255, 0.1);
 					}
 
-				#nav ul.links li.active {
+				#nav ul.links li.current-menu-item {
 					background-color: #ffffff;
 				}
 
-					#nav ul.links li.active a {
+					#nav ul.links li.current-menu-item a {
 						color: #1e252d;
 					}
 
-						#nav ul.links li.active a:hover {
+						#nav ul.links li.current-menu-item a:hover {
 							color: #18bfef !important;
 						}
 
