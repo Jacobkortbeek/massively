@@ -63,6 +63,47 @@
 				<!-- Main -->
 					<div id="main">
 
+
+
+
+						<?php
+
+						  $num_posts = ( is_front_page() ) ? 2 : -1;
+
+						  $args = array(
+						    'post_type' => 'post',
+						    'posts_per_page' => $num_posts
+						  );
+
+						  $query = new WP_Query( $args );
+
+						?>
+
+						<section class="row no-max pad">
+						  <?php if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); ?>
+						    <div class="small-6 medium-4 large-3 columns grid-item">
+						      <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'large' ); ?></a>
+						    </div>
+						  <?php endwhile; endif; wp_reset_postdata(); ?>
+						</section>
+
+
+						<section class="posts test">
+							<?php if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); ?>
+							<article>
+								<header>
+									<span class="date"><?php the_date('Y-m-d'); ?></span>
+									<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+								</header>
+								<a href="<?php the_permalink(); ?>" class="image fit"><?php the_post_thumbnail( 'medium' ); ?></a>
+								<p><?php the_excerpt(); ?></p>
+								<ul class="actions special">
+									<li><a href="<?php the_permalink(); ?>" class="button">Full Story</a></li>
+								</ul>
+								<?php endwhile; endif; wp_reset_postdata(); ?>
+							</article>
+
+
 						<!-- Featured Post -->
 							<article class="post featured">
 								<header class="major">
