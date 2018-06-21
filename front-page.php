@@ -103,7 +103,7 @@
 								<?php $i=0; if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); ?>
 									<?php if($i==0): ?>
 										<!-- Featured Post -->
-										<?php echo $i ?>
+										<?php echo "$i"; ?>
 											<article class="post">
 												<header class="major">
 													<span class="date"><?php the_date('Y-m-d'); ?> i is 0</span>
