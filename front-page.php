@@ -84,7 +84,7 @@
 
 
 						<!-- Featured Post -->
-							<!-- <article class="post">
+							<article class="post">
 								<header class="major">
 									<span class="date">April 25, 2017</span>
 									<h2><a href="#">And this is a<br />
@@ -97,7 +97,7 @@
 								<ul class="actions special">
 									<li><a href="#" class="button large">Full Story</a></li>
 								</ul>
-							</article> -->
+							</article>
 
 						<!-- Posts -->
 						<section class="posts test">
