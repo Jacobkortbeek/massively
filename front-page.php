@@ -116,7 +116,7 @@
 								</ul>
 							</article>
 
-							<?php $i++ endwhile; endif; wp_reset_postdata(); ?>
+							<?php $i++; endwhile; endif; wp_reset_postdata(); ?>
 						</section>
 
 							<section class="posts">
