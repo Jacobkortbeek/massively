@@ -103,7 +103,7 @@
 						<section class="posts test">
 							<?php if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); ?>
 							<article class="resr">
-								<header class="<?php post_class( 0 === $featured_posts->current_post ? 'first' : '' ); ?>">
+								<header <?php post_class( 0 === $featured_posts->current_post ? 'first' : 'major' ); ?>>
 									<span class="date"><?php the_date('Y-m-d'); ?></span>
 									<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 								</header>
