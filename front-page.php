@@ -79,16 +79,7 @@
 
 						?>
 
-						<section class="row no-max pad">
-						  <?php if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); ?>
-						    <div class="small-6 medium-4 large-3 columns grid-item">
-						      <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'large' ); ?></a>
-						    </div>
-						  <?php endwhile; endif; wp_reset_postdata(); ?>
-						</section>
-
-
-						<section class="posts test">
+						<section class="posts featured test">
 							<?php if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); ?>
 							<article>
 								<header>
@@ -105,7 +96,7 @@
 
 
 						<!-- Featured Post -->
-							<article class="post featured">
+							<article class="post">
 								<header class="major">
 									<span class="date">April 25, 2017</span>
 									<h2><a href="#">And this is a<br />
