@@ -79,21 +79,7 @@
 
 						?>
 
-						<section class="posts featured test">
-							<?php if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); ?>
-							<article>
-								<header class="major">
-									<span class="date"><?php the_date('Y-m-d'); ?></span>
-									<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-								</header>
-								<a href="<?php the_permalink(); ?>" class="image main"><?php the_post_thumbnail( 'medium' ); ?></a>
-								<p><?php the_excerpt(); ?></p>
-								<ul class="actions special">
-									<li><a href="<?php the_permalink(); ?>" class="button">Full Story</a></li>
-								</ul>
-								<?php endwhile; endif; wp_reset_postdata(); ?>
-							</article>
-						</section>
+
 
 
 						<!-- Featured Post -->
@@ -113,6 +99,22 @@
 							</article>
 
 						<!-- Posts -->
+						<section class="posts test">
+							<?php if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); ?>
+							<article>
+								<header>
+									<span class="date"><?php the_date('Y-m-d'); ?></span>
+									<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+								</header>
+								<a href="<?php the_permalink(); ?>" class="image main"><?php the_post_thumbnail( 'medium' ); ?></a>
+								<p><?php the_excerpt(); ?></p>
+								<ul class="actions special">
+									<li><a href="<?php the_permalink(); ?>" class="button">Full Story</a></li>
+								</ul>
+								<?php endwhile; endif; wp_reset_postdata(); ?>
+							</article>
+						</section>
+
 							<section class="posts">
 								<article>
 									<header>
