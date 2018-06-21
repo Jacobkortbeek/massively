@@ -37,9 +37,9 @@
 							<li><a href="elements.html">Elements Reference</a></li>
 						</ul> -->
 						<ul class="icons">
-							<p><?php the_field('social_media', 'option'); ?></p>
+							<p><?php the_field('social_media', 'theme-general-settings'); ?></p>
 							<?php
-								$social = get_field('social_media', 'options');
+								$social = get_field('social_media', 'theme-general-settings');
 
 								if( $social ): ?>
 									<p>THIS IS HERE</p>
