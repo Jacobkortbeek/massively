@@ -106,7 +106,7 @@
 									<?php else: ?>
 								<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 
-								<?php endif; $i++; endwhile; endif; wp_reset_postdata(); ?>
+								<?php $i++; endif; endwhile; endif; wp_reset_postdata(); ?>
 
 
 
