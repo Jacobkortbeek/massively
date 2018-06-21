@@ -43,7 +43,7 @@
 								if( $social ): ?>
 									<?php $twitter = get_field('twitter', 'options');
 										if( $twitter ): ?>
-											<p>This is twitter</p>
+											<li><a href="<?php $twitter ?>" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
 										<?php endif; ?>
 								<?php else: ?>
 								<p>This is not here</p>
