@@ -15,6 +15,7 @@
 				<!-- Header -->
 					<header id="header">
 						<a href="index.html" class="logo"><?php the_field( 'logo_text' ); ?></a>
+						<p><?php the_field('twitter', 'options'); ?></p>
 					</header>
 
 				<!-- Nav -->
