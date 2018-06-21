@@ -105,7 +105,7 @@
 							$i=0;
 							 if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); ?>
 							<article class="resr">
-								<header <?php echo ($i==0)?'active':''; ?>>
+								<header <?php echo ($i==0)?'class="major"':''; ?>>
 									<span class="date"><?php the_date('Y-m-d'); ?></span>
 									<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 								</header>
