@@ -39,7 +39,7 @@
 						<ul class="icons">
 							<p><?php the_field('twitter', 'options'); ?></p>
 							<?php
-								$social = get_field('social_media');
+								$social = get_field('social_media', 'options');
 
 								if( $social ): ?>
 									<p>THIS IS HERE</p>
