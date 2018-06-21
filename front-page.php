@@ -84,7 +84,7 @@
 
 
 						<!-- Featured Post -->
-							<article class="post">
+							<!-- <article class="post">
 								<header class="major">
 									<span class="date">April 25, 2017</span>
 									<h2><a href="#">And this is a<br />
@@ -97,7 +97,7 @@
 								<ul class="actions special">
 									<li><a href="#" class="button large">Full Story</a></li>
 								</ul>
-							</article>
+							</article> -->
 
 						<!-- Posts -->
 						<section class="posts test">
@@ -109,7 +109,7 @@
 									<span class="date"><?php the_date('Y-m-d'); ?></span>
 									<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 								</header>
-								<a href="<?php the_permalink(); ?>" class="image <?php echo ($i==0)?'class="main"':''; ?>"><?php the_post_thumbnail( 'medium' ); ?></a>
+								<a href="<?php the_permalink(); ?>" class="image fit"><?php the_post_thumbnail( 'medium' ); ?></a>
 								<p><?php the_excerpt(); ?></p>
 								<ul class="actions special">
 									<li><a href="<?php the_permalink(); ?>" class="button">Full Story</a></li>
