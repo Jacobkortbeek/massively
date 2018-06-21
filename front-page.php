@@ -15,10 +15,6 @@
 				<!-- Header -->
 					<header id="header">
 						<a href="index.html" class="logo"><?php the_field( 'logo_text' ); ?></a>
-						<p><?php the_field('twitter', 'options'); ?> twitter</p>
-						<p><?php the_field('facebook', 'options'); ?> facebook</p>
-						<p><?php the_field('instagram', 'options'); ?> instagram</p>
-						<p><?php the_field('github', 'options'); ?> github</p>
 					</header>
 
 				<!-- Nav -->
@@ -61,11 +57,6 @@
 								if( $github ): ?>
 									<li><a href="<?php the_field('github', 'options'); ?>" class="icon fa-github"><span class="label">github</span></a></li>
 							<?php endif; ?>
-							<!-- Make these if statements for the options social media panel -->
-							<!-- <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li> -->
 						</ul>
 					</nav>
 
