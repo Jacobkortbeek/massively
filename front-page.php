@@ -109,7 +109,7 @@
 									<span class="date"><?php the_date('Y-m-d'); ?></span>
 									<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 								</header>
-								<a href="<?php the_permalink(); ?>" class="image fit"><?php the_post_thumbnail( 'medium' ); ?></a>
+								<a href="<?php the_permalink(); ?>" class="image <?php echo ($i==0)?'class="main"':''; ?>"><?php the_post_thumbnail( 'medium' ); ?></a>
 								<p><?php the_excerpt(); ?></p>
 								<ul class="actions special">
 									<li><a href="<?php the_permalink(); ?>" class="button">Full Story</a></li>
