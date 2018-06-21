@@ -38,7 +38,7 @@
 						</ul> -->
 						<ul class="icons">
 							<?php
-								$social = get_field('social_media', 'options');
+								$social = get_field('social_media', 'option');
 
 								if( $social ): ?>
 									<p>THIS IS HERE</p>
