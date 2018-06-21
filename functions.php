@@ -1,4 +1,7 @@
 <?php
+  add_theme_support( 'menus' );
+  add_theme_support( 'post-thumbnails' );
+
   function wpt_theme_styles() {
     wp_enqueue_style( 'main_css', get_template_directory_uri() . '/style.css' );
     wp_enqueue_style( 'main_pretheme_file', get_template_directory_uri() . '/assets/css/main.css' );
