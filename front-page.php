@@ -111,8 +111,8 @@
 								<ul class="actions special">
 									<li><a href="<?php the_permalink(); ?>" class="button">Full Story</a></li>
 								</ul>
-								<?php endwhile; endif; wp_reset_postdata(); ?>
 							</article>
+							<?php endwhile; endif; wp_reset_postdata(); ?>
 						</section>
 
 							<section class="posts">
