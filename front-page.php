@@ -37,6 +37,7 @@
 							<li><a href="elements.html">Elements Reference</a></li>
 						</ul> -->
 						<ul class="icons">
+							<p><?php get_field('twitter', 'options'); ?></p>
 							<?php
 								$social = get_field('social_media', 'options');
 
