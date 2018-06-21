@@ -115,7 +115,7 @@
 							</article>
 						</section>
 
-							<section class="posts">
+							<!-- <section class="posts">
 								<article>
 									<header>
 										<span class="date">April 24, 2017</span>
@@ -188,7 +188,7 @@
 										<li><a href="#" class="button">Full Story</a></li>
 									</ul>
 								</article>
-							</section>
+							</section> -->
 
 						<!-- Footer -->
 							<footer>
