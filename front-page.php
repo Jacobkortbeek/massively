@@ -105,7 +105,7 @@
 										<!-- Featured Post -->
 											<article class="post">
 												<header class="major">
-													<span class="date"><?php the_date('Y-m-d'); ?></span>
+													<span class="date"><?php the_date('Y-m-d'); ?> i is 0</span>
 													<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 													<p><?php the_excerpt(); ?></p>
 												</header>
