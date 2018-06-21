@@ -42,9 +42,11 @@
 
 								if( $social ): ?>
 									<?php $twitter = get_field('twitter', 'options');
-										if( $twitter )?>
+										if( $twitter ): ?>
 											<p>This is twitter</p>
 										<?php endif; ?>
+								<?php else: ?>
+								<p>This is not here</p>
 									<?php endif; ?>
 							<!-- Make these if statements for the options social media panel -->
 							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
