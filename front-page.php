@@ -115,10 +115,10 @@
 													<li><a href="#" class="button large">Full Story</a></li>
 												</ul>
 											</article>
-									<?php else: ?>
+									<?php $i++; else: ?>
 								<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 
-								<?php $i++; endif; endwhile; endif; wp_reset_postdata(); ?>
+								<?php endif; endwhile; endif; wp_reset_postdata(); ?>
 
 
 
