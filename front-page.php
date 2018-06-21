@@ -102,7 +102,18 @@
 								<!-- TEST -->
 								<?php $i=0; if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); ?>
 									<?php if($i==0): ?>
-										<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+										<!-- Featured Post -->
+											<article class="post">
+												<header class="major">
+													<span class="date"><?php the_date('Y-m-d'); ?></span>
+													<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+													<p><?php the_excerpt(); ?></p>
+												</header>
+												<a href="<?php the_permalink(); ?>" class="image main"><?php the_post_thumbnail( 'medium' ); ?></a>
+												<ul class="actions special">
+													<li><a href="#" class="button large">Full Story</a></li>
+												</ul>
+											</article>
 									<?php else: ?>
 								<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 
@@ -113,9 +124,9 @@
 						<!-- Posts -->
 						<section class="posts">
 							<?php if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); ?>
-							<article class="resr">
+							<article class="post">
 								<header>
-									<span class="date"><?php the_date('Y-m-d'); ?></span>
+									<span class="date"><?php the_date('Y-m-d'); ?> test</span>
 									<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 								</header>
 								<a href="<?php the_permalink(); ?>" class="image fit"><?php the_post_thumbnail( 'medium' ); ?></a>
