@@ -103,6 +103,7 @@
 								<?php $i=0; if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); ?>
 									<?php if($i==0): ?>
 										<!-- Featured Post -->
+										<?php echo $i ?>
 											<article class="post">
 												<header class="major">
 													<span class="date"><?php the_date('Y-m-d'); ?> i is 0</span>
@@ -117,7 +118,7 @@
 									<?php else: ?>
 								<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 
-								<?php endif; $i++; endwhile; endif; wp_reset_postdata(); ?>
+								<?php $i++; endif; endwhile; endif; wp_reset_postdata(); ?>
 
 
 
