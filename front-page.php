@@ -25,7 +25,7 @@
 				      $defaults = array(
 				        'container' => false,
 				        'theme_location' => 'primary-menu',
-				        'menu_class' => 'no-bullet'
+				        'menu_class' => 'links'
 				      );
 
 				      wp_nav_menu( $defaults );
