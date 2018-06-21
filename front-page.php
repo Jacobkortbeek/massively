@@ -84,7 +84,7 @@
 
 
 						<!-- Featured Post -->
-							<article class="post">
+							<!-- <article class="post">
 								<header class="major">
 									<span class="date">April 25, 2017</span>
 									<h2><a href="#">And this is a<br />
@@ -97,13 +97,13 @@
 								<ul class="actions special">
 									<li><a href="#" class="button large">Full Story</a></li>
 								</ul>
-							</article>
+							</article> -->
 
 						<!-- Posts -->
 						<section class="posts">
-							<?php if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); ?>
+							<?php $i=0; if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); ?>
 							<article class="resr">
-								<header>
+								<header <?php echo ($i==0)?'class="major"':''; ?>
 									<span class="date"><?php the_date('Y-m-d'); ?></span>
 									<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 								</header>
@@ -114,7 +114,7 @@
 								</ul>
 							</article>
 
-							<?php endwhile; endif; wp_reset_postdata(); ?>
+							<?php $i++; endwhile; endif; wp_reset_postdata(); ?>
 						</section>
 
 							<section class="posts">
