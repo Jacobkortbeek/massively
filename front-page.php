@@ -38,7 +38,7 @@
 						</ul> -->
 						<ul class="icons">
 							<?php
-								$social = get_field('twitter', 'options');
+								$social = get_field('logo_text');
 
 								if( $social ): ?>
 									<p>THIS IS HERE</p>
