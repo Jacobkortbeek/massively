@@ -23,7 +23,7 @@
 						<?php
 
 				      $defaults = array(
-				        'container' => false,
+				        'container' => 'ul',
 				        'theme_location' => 'primary-menu',
 				        'menu_class' => 'links'
 				      );
@@ -31,11 +31,11 @@
 				      wp_nav_menu( $defaults );
 
 				    ?>
-						<ul class="links">
+						<!-- <ul class="links">
 							<li class="active"><a href="index.html">This has changed</a></li>
 							<li><a href="generic.html">Generic Page</a></li>
 							<li><a href="elements.html">Elements Reference</a></li>
-						</ul>
+						</ul> -->
 						<ul class="icons">
 							<!-- Make these if statements for the options social media panel -->
 							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
