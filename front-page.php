@@ -93,6 +93,7 @@
 								</ul>
 								<?php endwhile; endif; wp_reset_postdata(); ?>
 							</article>
+						</section>
 
 
 						<!-- Featured Post -->
