@@ -20,6 +20,17 @@
 				<!-- Nav -->
 				<!-- make this the main nav on the wordpress menu -->
 					<nav id="nav">
+						<?php
+
+				      $defaults = array(
+				        'container' => false,
+				        'theme_location' => 'primary-menu',
+				        'menu_class' => 'no-bullet'
+				      );
+
+				      wp_nav_menu( $defaults );
+
+				    ?>
 						<ul class="links">
 							<li class="active"><a href="index.html">This has changed</a></li>
 							<li><a href="generic.html">Generic Page</a></li>
