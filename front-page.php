@@ -91,7 +91,22 @@ Here is the pagination
 									<!-- add pagination functions here -->
 
 									<?php while( $query->have_posts() ) : $query->the_post(); ?>
-
+									<?php if($i==0): ?>
+										<!-- Featured Post -->
+										<?php echo "$i"; ?>
+											<article class="post">
+												<header class="major">
+													<span class="date"><?php the_date('Y-m-d'); ?> i is 0</span>
+													<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+													<p><?php the_excerpt(); ?></p>
+												</header>
+												<a href="<?php the_permalink(); ?>" class="image main"><?php the_post_thumbnail( 'medium' ); ?></a>
+												<ul class="actions special">
+													<li><a href="#" class="button large">Full Story</a></li>
+												</ul>
+											</article>
+											<section class="posts">
+									<?php $i++; else: ?>
 										<!-- posts -->
 											<article>
 												<header>
@@ -107,7 +122,7 @@ Here is the pagination
 
 											<!-- add pagination functions here -->
 
-								<?php endwhile; endif; wp_reset_postdata(); ?>
+								<?php endif; endwhile; endif; wp_reset_postdata(); ?>
 							</section>
 
 
