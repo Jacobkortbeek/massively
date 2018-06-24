@@ -84,7 +84,6 @@
 								<?php
 								$paged = (get_query_var('page')) ? get_query_var('page') : 1;
 								$args=array('category_name'=>'portfolio','posts_per_page'=>4,'paged'=>$paged);
-								query_posts($args);
 								$i=0; if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); ?>
 									<?php if($i==0): ?>
 
