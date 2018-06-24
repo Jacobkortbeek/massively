@@ -4,7 +4,12 @@
 
   function pagination_bar() {
 
-    $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+    if ( get_query_var( 'paged' ) ) { $paged = get_query_var( 'paged' ); }
+  elseif ( get_query_var( 'page' ) ) { $paged = get_query_var( 'page' ); }
+  else { $paged = 1; }
+
+  $the_query = new WP_Query('posts_per_page=3&paged=' . $paged); 
+
     global $wp_query;
     $published_posts = wp_count_posts()->publish;
     $posts_per_page = get_option('posts_per_page');
