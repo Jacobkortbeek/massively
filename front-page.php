@@ -76,7 +76,7 @@ Here is the pagination
 						    'post_type' => 'post',
 						    'posts_per_page' => $num_posts,
 								'orderby' => 'post_date',
-								'paged' => $ourCurrentPage
+								'paged' => 2
 						  );
 
 						  $query = new WP_Query( $args );
