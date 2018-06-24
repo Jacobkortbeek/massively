@@ -123,7 +123,7 @@ Here is the pagination
 											<!-- add pagination functions here -->
 
 								<?php endif; endwhile; ?>
-								max num posts <?php echo max_num_pages; ?>
+								max num posts <?php echo $query->max_num_pages; ?>
 
 							<?php endif; wp_reset_postdata(); ?>
 							</section>
