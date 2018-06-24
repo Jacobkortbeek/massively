@@ -124,7 +124,9 @@ Here is the pagination
 											<!-- add pagination functions here -->
 
 								<?php endif; endwhile; ?>
-								<?php // next_posts_link('next page', $query->max_num_pages); ?>
+								<?php echo paginate_links(array(
+									'total' => $query->max_num_pages
+								)); ?>
 								<p>our current page<?php echo $query->$paged; ?></p>
 
 							<?php endif; wp_reset_postdata(); ?>
