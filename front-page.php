@@ -97,7 +97,7 @@ if ($total_pages > 1){
 				'format' => '/page/%#%',
 				'current' => $current_page,
 				'total' => $total_pages,
-		)); ?>
+		)); } ?>
 									<?php while( $query->have_posts() ) : $query->the_post(); ?>
 									<?php if($i==0): ?>
 										<!-- Featured Post -->
@@ -141,7 +141,7 @@ if ($total_pages > 1){
 															'format' => '/page/%#%',
 															'current' => $current_page,
 															'total' => $total_pages,
-													)); ?>
+													)); } ?>
 								<?php endif; endwhile; endif; wp_reset_postdata(); ?>
 							</section>
 
