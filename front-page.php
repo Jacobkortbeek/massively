@@ -120,7 +120,7 @@ Here is the pagination
 
 								<?php endif; endwhile; echo next_posts_link(); endif; wp_reset_postdata(); ?>
 							</section>
-							<?php next_posts_link(); ?>
+							<?php echo next_posts_link(); ?>
 
 
 
