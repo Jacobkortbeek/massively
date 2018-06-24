@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<p>Do not use, use front page</p>
+<p>Do not use, use front page  HOME PHP</p>
 
 <?php
 
