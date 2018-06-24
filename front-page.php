@@ -62,10 +62,6 @@
 
 				<!-- Main -->
 					<div id="main">
-
-
-
-Here is the pagination
 						<?php
 
 						  $num_posts = get_option( 'posts_per_page' );
