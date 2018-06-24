@@ -70,13 +70,15 @@ Here is the pagination
 
 						  $num_posts = get_option( 'posts_per_page' );
 
-							$ourCurrentPage = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+							if ( get_query_var( 'paged' ) ) { $paged = get_query_var( 'paged' ); }
+							elseif ( get_query_var( 'page' ) ) { $paged = get_query_var( 'page' ); }
+							else { $paged = 1; }
 
 						  $args = array(
 						    'post_type' => 'post',
 						    'posts_per_page' => $num_posts,
 								'orderby' => 'post_date',
-								'paged' => $ourCurrentPage
+								'paged' => $paged
 
 						  );
 
@@ -123,7 +125,7 @@ Here is the pagination
 
 								<?php endif; endwhile; ?>
 								<?php // next_posts_link('next page', $query->max_num_pages); ?>
-								<p>our current page<?php echo $query->$ourCurrentPage; ?></p>
+								<p>our current page<?php echo $query->$paged; ?></p>
 
 							<?php endif; wp_reset_postdata(); ?>
 							</section>
