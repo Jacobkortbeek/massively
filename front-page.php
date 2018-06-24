@@ -130,10 +130,10 @@
 
 								<nav class="pagination">
 									found posts (<?php global $wp_query;
-									$query=new WP_Query("showposts=1&suppress_filters=0");
-									echo $query->found_posts; ?>),
+									//$query=new WP_Query("showposts=1&suppress_filters=0");
+									echo $wp_query->found_posts; ?>),
 									post per page (<?php echo $wp_query->posts_per_page; ?>),
-									 max num pages (<?php global $wp_query; echo $wp_query->max_num_pages; ?>),
+									 max num pages (<?php echo $wp_query->max_num_pages; ?>),
 									TEST
 									<?php pagination_bar(); ?>
 
