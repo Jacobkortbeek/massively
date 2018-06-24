@@ -124,12 +124,13 @@ Here is the pagination
 											<!-- add pagination functions here -->
 
 								<?php endif; endwhile; ?>
+								</section>
 								<?php echo paginate_links(array(
 									'total' => $query->max_num_pages
 								)); ?>
 
 							<?php endif; wp_reset_postdata(); ?>
-							</section>
+
 
 
 
