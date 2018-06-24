@@ -123,7 +123,8 @@
 								<?php endif; endwhile; ?>
 								</section>
 								<?php echo paginate_links(array(
-									'total' => $query->max_num_pages
+									'total' => $query->max_num_pages,
+									'current' => $paged
 								)); ?>
 
 								Page(<?php  echo $paged;  ?>)
