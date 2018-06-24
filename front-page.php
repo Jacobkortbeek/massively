@@ -128,6 +128,10 @@ Here is the pagination
 								<?php echo paginate_links(array(
 									'total' => $query->max_num_pages
 								)); ?>
+								var Paged<?php echo $query->$paged ?>
+								query Paged<?php echo $query->get_query_var( 'paged' ); ?>
+								query Page<?php echo $query->get_query_var( 'page' ); ?>
+
 
 							<?php endif; wp_reset_postdata(); ?>
 
