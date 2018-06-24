@@ -129,6 +129,8 @@
 								</div>
 
 								<nav class="pagination">
+									<?php global $wp_query;
+echo $wp_query->max_num_pages; ?>
 									TEST
 									<?php pagination_bar(); ?>
 								</nav>
