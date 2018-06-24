@@ -70,10 +70,13 @@ Here is the pagination
 
 						  $num_posts = get_option( 'posts_per_page' );
 
+							$ourCurrentPage = get_query_var('paged');
+
 						  $args = array(
 						    'post_type' => 'post',
 						    'posts_per_page' => $num_posts,
-								'orderby' => 'post_date'
+								'orderby' => 'post_date',
+								'paged' => $ourCurrentPage
 						  );
 
 						  $query = new WP_Query( $args );
@@ -117,10 +120,10 @@ Here is the pagination
 											</article>
 
 											<!-- add pagination functions here -->
-												TESTTEST<?php echo paginate_links(); ?>
-								<?php endif; endwhile; echo paginate_links(); endif; wp_reset_postdata(); ?>
+
+								<?php endif; endwhile; endif; wp_reset_postdata(); ?>
 							</section>
-							<?php echo paginate_links(); ?>
+
 
 
 
