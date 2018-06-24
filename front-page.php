@@ -117,9 +117,8 @@ Here is the pagination
 											</article>
 
 											<!-- add pagination functions here -->
-											<?php next_posts_link(); ?>
 
-								<?php endif; endwhile; endif; wp_reset_postdata(); ?>
+								<?php endif; endwhile; echo next_posts_link(); endif; wp_reset_postdata(); ?>
 							</section>
 							<?php next_posts_link(); ?>
 
