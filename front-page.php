@@ -122,7 +122,10 @@ Here is the pagination
 
 											<!-- add pagination functions here -->
 
-								<?php endif; endwhile; echo max_num_pages(); endif; wp_reset_postdata(); ?>
+								<?php endif; endwhile; ?>
+								max num posts <?php echo max_num_pages(); ?>
+
+							<?php endif; wp_reset_postdata(); ?>
 							</section>
 
 
