@@ -83,9 +83,6 @@
 
 								<?php $i=0; if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); ?>
 									<?php if($i==0): ?>
-										<nav class="pagination">
-											<?php pagination_bar(); ?>
-										</nav>
 										<!-- Featured Post -->
 										<?php echo "$i"; ?>
 											<article class="post">
@@ -113,9 +110,6 @@
 													<li><a href="<?php the_permalink(); ?>" class="button">Full Story</a></li>
 												</ul>
 											</article>
-											<nav class="pagination">
-												<?php pagination_bar(); ?>
-											</nav>
 								<?php endif; endwhile; endif; wp_reset_postdata(); ?>
 							</section>
 
@@ -132,10 +126,6 @@
 									<a href="#" class="page">10</a>
 									<a href="#" class="next">Next</a>
 								</div>
-
-								<nav class="pagination">
-									<?php pagination_bar(); ?>
-								</nav>
 
 							</footer>
 
