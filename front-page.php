@@ -75,8 +75,9 @@ Here is the pagination
 						  $args = array(
 						    'post_type' => 'post',
 						    'posts_per_page' => $num_posts,
-								'orderby' => 'post_date',
-								'paged' => $ourCurrentPage
+								'paged' => $ourCurrentPage,
+								'orderby' => 'post_date'
+
 						  );
 
 						  $query = new WP_Query( $args );
@@ -121,7 +122,7 @@ Here is the pagination
 
 											<!-- add pagination functions here -->
 
-								<?php endif; endwhile; endif; ?>
+								<?php endif; endwhile; endif; wp_reset_postdata(); ?>
 							</section>
 
 
