@@ -127,6 +127,12 @@
 									<a href="#" class="page">10</a>
 									<a href="#" class="next">Next</a>
 								</div>
+
+								<nav class="pagination">
+									TEST
+									<?php pagination_bar(); ?>
+								</nav>
+
 							</footer>
 
 					</div>
