@@ -81,12 +81,8 @@
 						?>
 
 
-								<?php
-								$paged = (get_query_var('page')) ? get_query_var('page') : 1;
-								$args=array('category_name'=>'portfolio','posts_per_page'=>4,'paged'=>$paged);
-								$i=0; if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); ?>
+								<?php $i=0; if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); ?>
 									<?php if($i==0): ?>
-
 										<!-- Featured Post -->
 										<?php echo "$i"; ?>
 											<article class="post">
@@ -114,10 +110,8 @@
 													<li><a href="<?php the_permalink(); ?>" class="button">Full Story</a></li>
 												</ul>
 											</article>
-											<nav class="pagination">
-												<?php pagination_bar(); ?>
-											</nav>
-								<?php endif;  endwhile; posts_nav_link(); wp_reset_query(); endif; ?>
+
+								<?php endif; endwhile; endif; wp_reset_postdata(); ?>
 							</section>
 
 						<!-- Footer -->

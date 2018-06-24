@@ -8,7 +8,9 @@
     $published_posts = wp_count_posts()->publish;
     $posts_per_page = get_option('posts_per_page');
 
-    $total_pages = ceil($published_posts / $posts_per_page);;
+    global $wp_query;
+
+    $total_pages = $wp_query->max_num_pages;
 
     if ($total_pages > 1){
         $current_page = max(1, get_query_var('paged'));
@@ -20,7 +22,6 @@
             'total' => $total_pages,
         ));
     }
-
 
 
 
