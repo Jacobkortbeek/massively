@@ -75,7 +75,7 @@ Here is the pagination
 						  $args = array(
 						    'post_type' => 'post',
 						    'posts_per_page' => $num_posts,
-								'paged' => $ourCurrentPage,
+								'paged' => 3,
 								'orderby' => 'post_date'
 
 						  );
