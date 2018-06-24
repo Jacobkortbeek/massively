@@ -74,7 +74,7 @@
 						    'post_type' => 'post',
 						    'posts_per_page' => $num_posts,
 								'orderby' => 'post_date',
-								'page' => $paged
+								'paged' => $paged
 
 						  );
 
