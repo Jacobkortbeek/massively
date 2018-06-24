@@ -3124,7 +3124,6 @@ input, select, textarea {
 		}
 
 		.pagination .next, .pagination .previous, .prev {
-			background-color: red;
 			text-decoration: none;
 			padding: 0 1.75rem;
 		}
@@ -3143,16 +3142,16 @@ input, select, textarea {
 				color: inherit !important;
 			}
 
-		.pagination .previous:before, .prev:before {
+		/* .pagination .previous:before, .prev:before {
 			content: '\f104';
 			margin-right: 0.9375em;
 		}
 
-		.pagination .next:before, .prev:before {
+		.pagination .next:before {
 			content: '\f105';
 			float: right;
 			margin-left: 0.9375em;
-		}
+		} */
 
 		@media screen and (max-width: 980px) {
 
