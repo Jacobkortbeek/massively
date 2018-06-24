@@ -7,48 +7,44 @@
     global $wp_query;
     $published_posts = wp_count_posts()->publish;
     $posts_per_page = get_option('posts_per_page');
-    //
-    // $total_pages = ceil($published_posts / $posts_per_page);;
-    //
-    // if ($total_pages > 1){
-    //     $current_page = max(1, get_query_var('paged'));
-    //
-    //     echo paginate_links(array(
-    //         'base' => get_pagenum_link(1) . '%_%',
-    //         'format' => '/page/%#%',
-    //         'current' => $current_page,
-    //         'total' => $total_pages,
-    //     ));
-    // }
 
+    $total_pages = ceil($published_posts / $posts_per_page);;
 
+    if ($total_pages > 1){
+        $current_page = max(1, get_query_var('paged'));
 
-
-    $total = ceil($published_posts / $posts_per_page);;
-    // only bother with the rest if we have more than 1 page!
-    if ( $total > 1 )  {
-         // get the current page
-         if ( get_query_var( 'paged' ) ) { $paged = get_query_var( 'paged' ); }
-elseif ( get_query_var( 'page' ) ) { $paged = get_query_var( 'page' ); }
-else { $paged = 1; }
-
-$the_query = new WP_Query('posts_per_page=3&paged=' . $paged);
-         // structure of "format" depends on whether we're using pretty permalinks
-         if( get_option('permalink_structure') ) {
-    	     $format = '&paged=%#%';
-         } else {
-    	     $format = 'page/%#%/';
-         }
-         echo paginate_links(array(
-              'base'     => get_pagenum_link(1) . '%_%',
-              'format'   => $format,
-              'current'  => $current_page,
-              'total'    => $total,
-              'mid_size' => 4,
-              'type'     => 'list',
-              'paged'          => $the_query
-         ));
+        echo paginate_links(array(
+            'base' => get_pagenum_link(1) . '%_%',
+            'format' => '/page/%#%',
+            'current' => $current_page,
+            'total' => $total_pages,
+        ));
     }
+
+
+
+
+    // $total = ceil($published_posts / $posts_per_page);;
+    // // only bother with the rest if we have more than 1 page!
+    // if ( $total > 1 )  {
+    //      // get the current page
+    //      if ( !$current_page = get_query_var('paged') )
+    //           $current_page = 1;
+    //      // structure of "format" depends on whether we're using pretty permalinks
+    //      if( get_option('permalink_structure') ) {
+    // 	     $format = '&paged=%#%';
+    //      } else {
+    // 	     $format = 'page/%#%/';
+    //      }
+    //      echo paginate_links(array(
+    //           'base'     => get_pagenum_link(1) . '%_%',
+    //           'format'   => $format,
+    //           'current'  => $current_page,
+    //           'total'    => $total,
+    //           'mid_size' => 4,
+    //           'type'     => 'list'
+    //      ));
+    // }
   }
 
   function register_theme_menus() {

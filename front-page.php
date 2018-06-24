@@ -81,14 +81,13 @@
 						?>
 
 
-								<?php $i=0; if( $query->have_posts() ) : ?>
-									<nav class="pagination">
-										<?php pagination_bar(); ?>
-									</nav>
-
-
-									<?php while( $query->have_posts() ) : $query->the_post(); ?>
+								<?php
+								$paged = (get_query_var('page')) ? get_query_var('page') : 1;
+								$args=array('category_name'=>'portfolio','posts_per_page'=>4,'paged'=>$paged);
+								query_posts($args)
+								$i=0; if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); ?>
 									<?php if($i==0): ?>
+
 										<!-- Featured Post -->
 										<?php echo "$i"; ?>
 											<article class="post">
@@ -119,8 +118,7 @@
 											<nav class="pagination">
 												<?php pagination_bar(); ?>
 											</nav>
-
-								<?php endif; endwhile; endif; wp_reset_postdata(); ?>
+								<?php endif;  endwhile; pagination_bar(); wp_reset_query(); endif; ?>
 							</section>
 
 						<!-- Footer -->
@@ -137,6 +135,9 @@
 									<a href="#" class="next">Next</a>
 								</div>
 
+								<nav class="pagination">
+									<?php pagination_bar(); ?>
+								</nav>
 
 							</footer>
 
