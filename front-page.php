@@ -70,13 +70,13 @@ Here is the pagination
 
 						  $num_posts = get_option( 'posts_per_page' );
 
-							$ourCurrentPage = get_query_var('paged');
+							$ourCurrentPage = $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 
 						  $args = array(
 						    'post_type' => 'post',
 						    'posts_per_page' => $num_posts,
 								'orderby' => 'post_date',
-								// 'paged' => $ourCurrentPage
+								'paged' => $ourCurrentPage
 
 						  );
 
@@ -86,7 +86,6 @@ Here is the pagination
 
 
 								<?php $i=0; if( $query->have_posts() ) : ?>
-									<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; ?>
 
 									<!-- add pagination functions here -->
 
