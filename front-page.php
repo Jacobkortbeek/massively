@@ -129,8 +129,10 @@
 								</div>
 
 								<nav class="pagination">
-									found posts (<?php global $wp_query;
-									echo $wp_query->found_posts; ?>),
+									found posts (<?php
+									$query=new WP_Query("showposts=1&category_name=news-blog&suppress_filters=0");
+									global $wp_query;
+								echo $query->found_posts; ?>),
 									post per page (<?php echo $wp_query->posts_per_page; ?>),
 									 max num pages (<?php echo $wp_query->max_num_pages; ?>),
 									TEST
