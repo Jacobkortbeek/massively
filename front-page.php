@@ -62,19 +62,20 @@
 
 				<!-- Main -->
 					<div id="main">
+
 						<?php
 
 						  $num_posts = get_option( 'posts_per_page' );
 
-							// if ( get_query_var( 'paged' ) ) { $paged = get_query_var( 'paged' ); }
-							// elseif ( get_query_var( 'page' ) ) { $paged = get_query_var( 'page' ); }
-							// else { $paged = 1; }
-							$paged = get_query_var( 'page' );
+							if ( get_query_var( 'paged' ) ) { $paged = get_query_var( 'paged' ); }
+							elseif ( get_query_var( 'page' ) ) { $paged = get_query_var( 'page' ); }
+							else { $paged = 1; }
+
 						  $args = array(
 						    'post_type' => 'post',
 						    'posts_per_page' => $num_posts,
 								'orderby' => 'post_date',
-								'paged' => $paged
+								'page' => $paged
 
 						  );
 
@@ -123,7 +124,7 @@
 								</section>
 								<?php echo paginate_links(array(
 									'total' => $query->max_num_pages
-								)); ?>
+								)); echo $query->$paged; ?>
 							<?php endif; wp_reset_postdata(); ?>
 
 
