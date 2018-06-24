@@ -3,7 +3,7 @@
   add_theme_support( 'post-thumbnails' );
 
   function wpsites_exclude_latest_post( $query ) {
-	if ( $query->is_home() && $query->is_main_query() ) {
+	if ( $query->is_front_page() && $query->is_main_query() ) {
 		$query->set( 'offset', '1' );
 	}
 }
