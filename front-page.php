@@ -130,6 +130,7 @@
 
 								<nav class="pagination">
 									<?php pagination_bar(); ?>
+									<?php get_query_var( 'paged' ); ?>
 								</nav>
 
 							</footer>
