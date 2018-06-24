@@ -68,7 +68,7 @@
 
 						<?php
 
-						  $num_posts = ( is_front_page() ) ? 20 : -1;
+						  $num_posts = ( is_front_page() ) ? 3 : -1;
 
 						  $args = array(
 						    'post_type' => 'post',
