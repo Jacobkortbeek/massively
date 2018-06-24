@@ -4,9 +4,9 @@
 
   function pagination_bar() {
 
-    // global $wp_query;
-    // $published_posts = wp_count_posts()->publish;
-    // $posts_per_page = get_option('posts_per_page');
+    global $wp_query;
+    $published_posts = wp_count_posts()->publish;
+    $posts_per_page = get_option('posts_per_page');
     //
     // $total_pages = ceil($published_posts / $posts_per_page);;
     //
