@@ -3124,6 +3124,7 @@ input, select, textarea {
 		}
 
 		.pagination .next, .pagination .previous .prev {
+			background-color: red;
 			text-decoration: none;
 			padding: 0 1.75rem;
 		}
