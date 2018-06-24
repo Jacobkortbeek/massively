@@ -117,7 +117,7 @@
 											<nav class="pagination">
 												<?php pagination_bar(); ?>
 											</nav>
-								<?php endif;  endwhile; posts_nav_link(); wp_reset_query(); endif; wp_reset_postdata(); ?>
+								<?php endif;  endwhile; posts_nav_link(); wp_reset_query(); endif; ?>
 							</section>
 
 						<!-- Footer -->
