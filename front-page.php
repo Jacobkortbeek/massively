@@ -127,7 +127,6 @@ Here is the pagination
 								<?php echo paginate_links(array(
 									'total' => $query->max_num_pages
 								)); ?>
-								<p>our current page<?php echo $query->$paged; ?></p>
 
 							<?php endif; wp_reset_postdata(); ?>
 							</section>
