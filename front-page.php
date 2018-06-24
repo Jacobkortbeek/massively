@@ -75,8 +75,8 @@ Here is the pagination
 						  $args = array(
 						    'post_type' => 'post',
 						    'posts_per_page' => $num_posts,
-								'paged' => 3,
-								'orderby' => 'post_date'
+								'orderby' => 'post_date',
+								'paged' => $ourCurrentPage
 
 						  );
 
@@ -123,7 +123,7 @@ Here is the pagination
 											<!-- add pagination functions here -->
 
 								<?php endif; endwhile; ?>
-								<?php next_posts_link('next page', $query->max_num_pages); ?>
+								<?php // next_posts_link('next page', $query->max_num_pages); ?>
 								<p>max num pages<?php echo $query->$ourCurrentPage; ?></p>
 
 							<?php endif; wp_reset_postdata(); ?>
