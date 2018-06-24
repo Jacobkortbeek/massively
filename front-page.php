@@ -121,7 +121,7 @@ Here is the pagination
 
 											<!-- add pagination functions here -->
 
-								<?php endif; endwhile; endif; wp_reset_postdata(); ?>
+								<?php endif; endwhile; endif; ?>
 							</section>
 
 
