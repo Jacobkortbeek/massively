@@ -46,7 +46,7 @@ $the_query = new WP_Query('posts_per_page=3&paged=' . $paged);
               'total'    => $total,
               'mid_size' => 4,
               'type'     => 'list',
-              'paged'          => $paged
+              'paged'          => $the_query
          ));
     }
   }
