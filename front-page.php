@@ -129,7 +129,7 @@
 								</div>
 
 								<nav class="pagination">
-					<?php pagination_bar(); ?>
+									<?php pagination_bar(); ?>
 								</nav>
 
 							</footer>
