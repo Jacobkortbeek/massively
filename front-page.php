@@ -129,20 +129,10 @@
 								</div>
 
 								<nav class="pagination">
-									<?php
-global $wp_query;
-
-$big = 999999999; // need an unlikely integer
-
-echo paginate_links( array(
-	'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
-	'format' => '?paged=%#%',
-	'current' => max( 1, get_query_var('paged') ),
-	'total' => $wp_query->max_num_pages
-) );
-?>
 									<?php global $wp_query;
-echo $wp_query->max_num_pages; ?>
+									echo $wp_query->found_posts;
+									echo $wp_query->posts_per_page;
+										echo $wp_query->max_num_pages; ?>
 									TEST
 									<?php pagination_bar(); ?>
 								</nav>
