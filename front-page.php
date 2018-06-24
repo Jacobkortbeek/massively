@@ -81,11 +81,25 @@
 						?>
 
 
-								<?php $i=0; if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); ?>
+								<?php $i=0; if( $query->have_posts() ) : ?>
+
+<?php global $wp_query;
+$published_posts = wp_count_posts()->publish;
+$posts_per_page = get_option('posts_per_page');
+
+$total_pages = ceil($published_posts / $posts_per_page);;
+
+if ($total_pages > 1){
+		$current_page = max(1, get_query_var('paged'));
+
+		echo paginate_links(array(
+				'base' => get_pagenum_link(1) . '%_%',
+				'format' => '/page/%#%',
+				'current' => $current_page,
+				'total' => $total_pages,
+		)); ?>
+									<?php while( $query->have_posts() ) : $query->the_post(); ?>
 									<?php if($i==0): ?>
-										<nav class="pagination">
-											<?php pagination_bar(); ?>
-										</nav>
 										<!-- Featured Post -->
 										<?php echo "$i"; ?>
 											<article class="post">
@@ -113,9 +127,21 @@
 													<li><a href="<?php the_permalink(); ?>" class="button">Full Story</a></li>
 												</ul>
 											</article>
-											<nav class="pagination">
-												<?php pagination_bar(); ?>
-											</nav>
+											<?php global $wp_query;
+											$published_posts = wp_count_posts()->publish;
+											$posts_per_page = get_option('posts_per_page');
+
+											$total_pages = ceil($published_posts / $posts_per_page);;
+
+											if ($total_pages > 1){
+													$current_page = max(1, get_query_var('paged'));
+
+													echo paginate_links(array(
+															'base' => get_pagenum_link(1) . '%_%',
+															'format' => '/page/%#%',
+															'current' => $current_page,
+															'total' => $total_pages,
+													)); ?>
 								<?php endif; endwhile; endif; wp_reset_postdata(); ?>
 							</section>
 
