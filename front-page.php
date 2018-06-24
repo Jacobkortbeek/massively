@@ -82,19 +82,8 @@ Here is the pagination
 
 
 								<?php $i=0; if( $query->have_posts() ) : ?>
-									<?php
-										if ( get_query_var( 'paged' ) ) { $paged = get_query_var( 'paged' ); }
-										elseif ( get_query_var( 'page' ) ) { $paged = get_query_var( 'page' ); }
-										else { $paged = 1; }
 
-										$the_query = new WP_Query('posts_per_page=3&paged=' . $paged);
 
-										the_posts_pagination( array(
-	'mid_size'  => 2,
-	'prev_text' => __( 'Back', 'textdomain' ),
-	'next_text' => __( 'Onward', 'textdomain' ),
-) );
-									?>
 									<!-- add pagination functions here -->
 
 									<?php while( $query->have_posts() ) : $query->the_post(); ?>
@@ -131,6 +120,10 @@ Here is the pagination
 
 								<?php endif; endwhile; endif; wp_reset_postdata(); ?>
 							</section>
+							<?php next_posts_link(); ?>
+
+
+
 
 						<!-- Footer -->
 							<footer>
