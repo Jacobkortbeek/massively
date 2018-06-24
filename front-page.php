@@ -144,7 +144,7 @@
 //paste this where the pagination must appear
 
 global $wp_query;
-$total = $wp_query->max_num_pages;
+$total = 10;
 // only bother with the rest if we have more than 1 page!
 if ( $total > 1 )  {
      // get the current page
@@ -165,30 +165,6 @@ if ( $total > 1 )  {
           'type'     => 'list'
      ));
 }
-?>
-
-TESTINGS
-<?php
-//Protect against arbitrary paged values
-$paged = ( get_query_var( 'paged' ) ) ? absint( get_query_var( 'paged' ) ) : 1;
-
-$args = array(
-	'posts_per_page' => 5,
-	'category_name' => 'gallery',
-	'paged' => $paged,
-);
-
-$the_query = new WP_Query( $args );
-?>
-<?php
-$big = 999999999; // need an unlikely integer
-
-echo paginate_links( array(
-	'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
-	'format' => '?paged=%#%',
-	'current' => max( 1, get_query_var('paged') ),
-	'total' => $the_query->max_num_pages
-) );
 ?>
 
 
