@@ -28,8 +28,11 @@
     // only bother with the rest if we have more than 1 page!
     if ( $total > 1 )  {
          // get the current page
-         if ( !$current_page = get_query_var('paged') )
-              $current_page = 1;
+         if ( get_query_var( 'paged' ) ) { $paged = get_query_var( 'paged' ); }
+elseif ( get_query_var( 'page' ) ) { $paged = get_query_var( 'page' ); }
+else { $paged = 1; }
+
+$the_query = new WP_Query('posts_per_page=3&paged=' . $paged);
          // structure of "format" depends on whether we're using pretty permalinks
          if( get_option('permalink_structure') ) {
     	     $format = '&paged=%#%';
