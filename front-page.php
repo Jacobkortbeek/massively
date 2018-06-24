@@ -117,7 +117,7 @@ Here is the pagination
 											</article>
 
 											<!-- add pagination functions here -->
-
+												TESTTEST<?php echo paginate_links(); ?>
 								<?php endif; endwhile; echo paginate_links(); endif; wp_reset_postdata(); ?>
 							</section>
 							<?php echo paginate_links(); ?>
