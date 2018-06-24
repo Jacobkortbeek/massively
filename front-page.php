@@ -82,11 +82,6 @@
 
 
 								<?php $i=0; if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); ?>
-									<?php if ( get_query_var( 'paged' ) ) { $paged = get_query_var( 'paged' ); }
-elseif ( get_query_var( 'page' ) ) { $paged = get_query_var( 'page' ); }
-else { $paged = 1; }
-
-$the_query = new WP_Query('posts_per_page=3&paged=' . $paged); ?>
 									<?php if($i==0): ?>
 										<nav class="pagination">
 											<?php pagination_bar(); ?>
