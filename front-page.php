@@ -70,10 +70,10 @@ Here is the pagination
 
 						  $num_posts = get_option( 'posts_per_page' );
 
-							if ( get_query_var( 'page' ) ) { $paged = get_query_var( 'page' ); }
-							elseif ( get_query_var( 'page' ) ) { $paged = get_query_var( 'page' ); }
-							else { $paged = 1; }
-
+							// if ( get_query_var( 'paged' ) ) { $paged = get_query_var( 'paged' ); }
+							// elseif ( get_query_var( 'page' ) ) { $paged = get_query_var( 'page' ); }
+							// else { $paged = 1; }
+							$paged = get_query_var( 'page' );
 						  $args = array(
 						    'post_type' => 'post',
 						    'posts_per_page' => $num_posts,
