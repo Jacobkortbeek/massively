@@ -70,7 +70,7 @@ Here is the pagination
 
 						  $num_posts = get_option( 'posts_per_page' );
 
-							$ourCurrentPage = $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+							$ourCurrentPage = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 
 						  $args = array(
 						    'post_type' => 'post',
