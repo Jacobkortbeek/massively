@@ -3123,13 +3123,13 @@ input, select, textarea {
 			text-transform: uppercase;
 		}
 
-		.pagination .next, .pagination .previous .prev {
+		.pagination .next, .pagination .previous, .prev {
 			background-color: red;
 			text-decoration: none;
 			padding: 0 1.75rem;
 		}
 
-			.pagination .next:before, .pagination .previous:before .prev:before {
+			.pagination .next:before, .pagination .previous:before, .prev:before {
 				-moz-osx-font-smoothing: grayscale;
 				-webkit-font-smoothing: antialiased;
 				font-family: FontAwesome;
@@ -3138,17 +3138,17 @@ input, select, textarea {
 				text-transform: none !important;
 			}
 
-			.pagination .next:before, .pagination .previous:before .prev:before {
+			.pagination .next:before, .pagination .previous:before, .prev:before {
 				display: inline-block;
 				color: inherit !important;
 			}
 
-		.pagination .previous:before .prev:before {
+		.pagination .previous:before, .prev:before {
 			content: '\f104';
 			margin-right: 0.9375em;
 		}
 
-		.pagination .next:before .prev:before {
+		.pagination .next:before, .prev:before {
 			content: '\f105';
 			float: right;
 			margin-left: 0.9375em;
