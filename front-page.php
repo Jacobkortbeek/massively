@@ -75,7 +75,7 @@
 						    'post_type' => 'post',
 						    'posts_per_page' => $num_posts,
 								'orderby' => 'post_date',
-								'current' => $paged
+								'page' => $paged
 
 						  );
 
@@ -124,7 +124,10 @@
 								</section>
 								<?php echo paginate_links(array(
 									'total' => $query->max_num_pages
-								)); echo $query->$paged; ?>
+								)); ?>
+
+								Page(<?php  echo $query->$paged;  ?>)
+
 							<?php endif; wp_reset_postdata(); ?>
 
 
