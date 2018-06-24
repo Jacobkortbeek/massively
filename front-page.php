@@ -133,7 +133,7 @@
 									$query=new WP_Query("showposts=1&suppress_filters=0");
 									echo $query->found_posts; ?>),
 									post per page (<?php echo $wp_query->posts_per_page; ?>),
-									 max num pages (<?php global $wp_query echo $wp_query->max_num_pages; ?>),
+									 max num pages (<?php global $wp_query; echo $wp_query->max_num_pages; ?>),
 									TEST
 									<?php pagination_bar(); ?>
 
