@@ -144,7 +144,9 @@
 //paste this where the pagination must appear
 
 global $wp_query;
-$total = 10;
+$published_posts = wp_count_posts()->publish;
+$posts_per_page = get_option('posts_per_page');
+$total = ceil($published_posts / $posts_per_page);;
 // only bother with the rest if we have more than 1 page!
 if ( $total > 1 )  {
      // get the current page
