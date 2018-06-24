@@ -126,7 +126,7 @@
 									'total' => $query->max_num_pages
 								)); ?>
 
-								Page(<?php  echo $query->$paged;  ?>)
+								Page(<?php  echo $paged;  ?>)
 
 							<?php endif; wp_reset_postdata(); ?>
 
