@@ -134,7 +134,7 @@
 									echo $wp_query->found_posts; ?>),
 									post per page (<?php echo $wp_query->posts_per_page; ?>),
 									 max num pages (<?php echo $wp_query->max_num_pages; ?>),
-									 count posts (<?php echo $wp_count_posts; ?>),
+									 count posts (<?php echo $wp_count_posts(); ?>),
 									TEST
 									<?php pagination_bar(); ?>
 
