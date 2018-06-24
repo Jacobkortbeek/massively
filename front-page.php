@@ -122,11 +122,13 @@
 
 								<?php endif; endwhile; ?>
 								</section>
+								<div class="pagination">
 								<?php echo paginate_links(array(
 									'total' => $query->max_num_pages,
-									'current' => $paged
+									'current' => $paged,
+									'before_page'
 								)); ?>
-
+							</div>
 								Page(<?php  echo $paged;  ?>)
 
 							<?php endif; wp_reset_postdata(); ?>
