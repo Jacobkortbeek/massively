@@ -4,6 +4,7 @@
 
   function pagination_bar() {
 
+    $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
     global $wp_query;
     $published_posts = wp_count_posts()->publish;
     $posts_per_page = get_option('posts_per_page');
@@ -18,24 +19,10 @@
             'format' => '/page/%#%',
             'current' => $current_page,
             'total' => $total_pages,
+            'paged' => $paged,
         ));
     }
 
-    if ( get_query_var('paged') ) {
-
-$paged = get_query_var('paged');
-
-} elseif ( get_query_var('page') ) {
-
-$paged = get_query_var('page');
-
-} else {
-
-   $paged = 1;
-
-}
-
-query_posts( array( 'post_type' => 'post', 'paged' => $paged ) );
 
 
 
