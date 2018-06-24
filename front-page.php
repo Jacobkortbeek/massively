@@ -68,7 +68,7 @@
 
 						<?php
 
-						  $num_posts = ( is_front_page() ) ? 3 : -1;
+						  $num_posts = get_option( 'posts_per_page' );
 
 						  $args = array(
 						    'post_type' => 'post',
