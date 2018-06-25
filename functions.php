@@ -30,7 +30,7 @@
     2
   );
   function mod_contact7_form_title( $template ) {
-  $template->set_title( ‘Contact form footer’ );
+  $template->set_title( ‘Contact us now’ );
   return $template;
 }
 add_filter(
