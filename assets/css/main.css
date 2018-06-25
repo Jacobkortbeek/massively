@@ -3142,7 +3142,7 @@ input, select, textarea {
 				color: inherit !important;
 			}
 
-		/* .pagination .previous:before, .prev:before {
+		.pagination .previous:before, .prev:before {
 			content: '\f104';
 			margin-right: 0.9375em;
 		}
@@ -3151,7 +3151,7 @@ input, select, textarea {
 			content: '\f105';
 			float: right;
 			margin-left: 0.9375em;
-		} */
+		}
 
 		@media screen and (max-width: 980px) {
 

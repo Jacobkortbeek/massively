@@ -126,7 +126,8 @@
 								<?php echo paginate_links(array(
 									'total' => $query->max_num_pages,
 									'current' => $paged,
-									'before_page'
+									'prev_text' => 'Previous',
+									'next_text' => 'Next'
 								)); ?>
 							</div>
 								Page(<?php  echo $paged;  ?>)
