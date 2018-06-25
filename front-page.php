@@ -167,7 +167,7 @@
 							</section>
 							<section>
 								<h3>Phone</h3>
-								<p><a href="tel:<?php the_feild( 'phone_number', 'options' ); ?>"><?php the_feild( 'phone_number', 'options' ); ?></a></p>
+								<p><a ><?php the_feild( 'phone_number', 'options' ); ?></a></p>
 							</section>
 							<section>
 								<h3>Email</h3>
