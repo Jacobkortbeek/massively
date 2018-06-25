@@ -160,11 +160,6 @@
 								</ul>
 							</form> -->
 							<div class="">
-								<?php
-  								echo do_shortcode(
-    								‘[contact-form-7 id="50" title="Contact form footer"]’
-  								);
-								?>
 								<?php the_field( 'footer_email_form_short_code', 'options' ); ?>
 							</div>
 						</section>
