@@ -140,7 +140,7 @@
 				<!-- Footer -->
 					<footer id="footer">
 						<section>
-							<form method="post" action="#">
+							<!-- <form method="post" action="#">
 								<div class="fields">
 									<div class="field">
 										<label for="name">Name</label>
@@ -158,7 +158,10 @@
 								<ul class="actions">
 									<li><input type="submit" value="Send Message" /></li>
 								</ul>
-							</form>
+							</form> -->
+							<div class="">
+								<?php the_field( 'footer_email_form_short_code' ); ?>
+							</div>
 						</section>
 						<section class="split contact">
 							<section class="alt">
