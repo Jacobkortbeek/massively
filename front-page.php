@@ -122,6 +122,8 @@
 
 								<?php endif; endwhile; ?>
 								</section>
+								<!-- Footer -->
+									<footer>
 								<div class="pagination">
 								<?php echo paginate_links(array(
 									'total' => $query->max_num_pages,
@@ -139,8 +141,7 @@
 
 
 
-						<!-- Footer -->
-							<footer>
+
 								<div class="pagination">
 									<!--<a href="#" class="previous">Prev</a>-->
 									<a href="#" class="page active">1</a>
