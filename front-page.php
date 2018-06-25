@@ -162,7 +162,7 @@
 							<div class="">
 								<?php
   								echo do_shortcode(
-    							‘the_field( 'footer_email_form_short_code' );’
+    							‘the_field( 'footer_email_form_short_code' )’
   								);
 								?>
 								<?php the_field( 'footer_email_form_short_code' ); ?>
