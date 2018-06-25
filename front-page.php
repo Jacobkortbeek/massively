@@ -176,10 +176,6 @@
 							<section>
 								<h3>Social</h3>
 								<ul class="icons alt">
-									<li><a href="#" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
 									<!-- twitter -->
 									<?php $twitter = get_field('twitter', 'options');
 										if( $twitter ): ?>
@@ -207,7 +203,7 @@
 
 				<!-- Copyright -->
 					<div id="copyright">
-						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+						<ul><li>&copy; Kortbeek Creative</li><li>Design by Psycology: <a href="http://kortbeekcreative.com/">Kortbeek Creative</a></li></ul>
 					</div>
 
 			</div>
