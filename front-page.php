@@ -134,23 +134,7 @@
 							</div>
 
 							<?php endif; wp_reset_postdata(); ?>
-
-								<!-- <div class="pagination">
-									<a href="#" class="previous">Prev</a>
-									<a href="#" class="page active">1</a>
-									<a href="#" class="page">2</a>
-									<a href="#" class="page">3</a>
-									<span class="extra">&hellip;</span>
-									<a href="#" class="page">8</a>
-									<a href="#" class="page">9</a>
-									<a href="#" class="page">10</a>
-									<a href="#" class="next">Next</a>
-								</div> -->
-
-
-
 							</footer>
-
 					</div>
 
 				<!-- Footer -->
@@ -179,16 +163,15 @@
 						<section class="split contact">
 							<section class="alt">
 								<h3>Address</h3>
-								<p>1234 Somewhere Road #87257<br />
-								Nashville, TN 00000-0000</p>
+								<p><?php the_field( 'business_address', 'options' ); ?></p>
 							</section>
 							<section>
 								<h3>Phone</h3>
-								<p><a href="#">(000) 000-0000</a></p>
+								<p><a href="tel:<?php the_feild( 'phone_number', 'options' ); ?>"><?php the_feild( 'phone_number', 'options' ); ?></a></p>
 							</section>
 							<section>
 								<h3>Email</h3>
-								<p><a href="#">info@untitled.tld</a></p>
+								<p><a href="mailto:<?php the_field( 'email', 'options' ); ?>"><?php the_field( 'email', 'options' ); ?></a></p>
 							</section>
 							<section>
 								<h3>Social</h3>
