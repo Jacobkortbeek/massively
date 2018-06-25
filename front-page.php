@@ -161,9 +161,9 @@
 							</form> -->
 							<div class="">
 								<?php
-  								echo do_shortcode(
-    							‘ the_field( 'footer_email_form_short_code', 'options' ); ’
-  								);
+  								// echo do_shortcode(
+    							// ‘ the_field( 'footer_email_form_short_code', 'options' ); ’
+  								// );
 								?>
 								<?php the_field( 'footer_email_form_short_code', 'options' ); ?>
 							</div>
