@@ -162,7 +162,7 @@
 							<div class="">
 								<?php
   								echo do_shortcode(
-    							‘?><?php the_field( 'footer_email_form_short_code', 'options' ); ?><?php’
+    								‘[contact-form-7 title="Contact us now"]’
   								);
 								?>
 								<?php the_field( 'footer_email_form_short_code', 'options' ); ?>

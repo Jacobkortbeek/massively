@@ -2,9 +2,41 @@
   add_theme_support( 'menus' );
   add_theme_support( 'post-thumbnails' );
 
-  function pagination_bar() {
-    
+  function mod_contact7_form_content( $template, $prop ) {
+    if ( ‘form’ == $prop ) {
+      return implode( '', array(
+        '<div class=”row”>',
+          '<div class=”col”>',
+            '[text* your-name placeholder”Name”]',
+            '[email* your-email placeholder”Email”]',
+            '[text* your-subject placeholder”Subject”]',
+          '</div>',
+          '<div class=”col”>',
+            '[textarea* your-message placeholder”Message”]',
+          '</div>',
+        '</div>',
+        '<div class=”row”>',
+          '[submit class:btn “Send Mail”]',
+        '</div>'
+      ) );
+    } else {
+      return $template;
+    }
   }
+  add_filter(
+    ‘wpcf7_default_template’,
+    ‘mod_contact7_form_content’,
+    10,
+    2
+  );
+  function mod_contact7_form_title( $template ) {
+  $template->set_title( ‘Contact form footer’ );
+  return $template;
+}
+add_filter(
+  ‘wpcf7_contact_form_default_pack’,
+  ‘mod_contact7_form_title’
+);
 
   function register_theme_menus() {
     register_nav_menus(
