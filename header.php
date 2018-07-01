@@ -13,15 +13,19 @@
   				<!-- Intro -->
   					<div id="intro" class="">
               <!-- if is front page -->
+              <?php if( is_front_page() ) : ?>
   						<h1><?php the_field( 'hero_heading' ); ?></h1>
   						<p><?php the_field( 'hero_sub-headin' ); ?></p>
   						<ul class="actions">
   							<li><a href="#header" class="button icon solo fa-arrow-down scrolly">Continue</a></li>
   						</ul>
               <!-- Elseif single.php -->
+            <?php elseif( is_single() ): ?>
 
               <!-- blog title and exerpt -->
+              <h1>This is the single php file</h1>
               <!-- endif -->
+            <?php endif; ?>
   					</div>
 
   				<!-- Header -->
