@@ -14,17 +14,22 @@
   					<div id="intro" class="">
               <!-- if is front page -->
               <?php if( is_front_page() ) : ?>
-  						<h1><?php the_field( 'hero_heading' ); ?></h1>
-  						<p><?php the_field( 'hero_sub-headin' ); ?></p>
-  						<ul class="actions">
-  							<li><a href="#header" class="button icon solo fa-arrow-down scrolly">Continue</a></li>
-  						</ul>
+    						<h1><?php the_field( 'hero_heading' ); ?></h1>
+    						<p><?php the_field( 'hero_sub-headin' ); ?></p>
+    						<ul class="actions">
+    							<li><a href="#header" class="button icon solo fa-arrow-down scrolly">Continue</a></li>
+    						</ul>
               <!-- Elseif single.php -->
             <?php elseif( is_single() ): ?>
-
-              <!-- blog title and exerpt -->
-              <h1>This is the single php file</h1>
-              <!-- endif -->
+                <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+                  <h1><?php the_title(); ?></h1>
+      						<p><?php the_excerpt(); ?></p>
+      						<ul class="actions">
+      							<li><a href="#header" class="button icon solo fa-arrow-down scrolly">Continue</a></li>
+      						</ul>
+                <?php endwhile; else : ?>
+                  <p><?php _e( 'Sorry, no pages found.' ); ?>
+                <?php endif; ?>
             <?php endif; ?>
   					</div>
 
