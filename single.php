@@ -15,7 +15,7 @@
           <h1><?php the_title(); ?></h1>
           <p><?php the_excerpt(); ?></p>
         </header>
-        <div class="image main"><?php the_post_thumbnail( 'full' ); ?></div>
+        <div class="image main"><?php the_post_thumbnail( 'medium' ); ?></div>
         <p><?php the_content(); ?></p>
       <?php endwhile; else : ?>
         <p><?php _e( 'Sorry, no pages found.' ); ?>
