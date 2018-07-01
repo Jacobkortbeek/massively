@@ -38,11 +38,7 @@
               <?php if( is_front_page() ) : ?>
   						        <a href="index.html" class="logo"><?php the_field( 'logo_text' ); ?></a>
               <?php elseif( is_single() ): ?>
-                <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-              <a href="index.html" class="logo"><?php the_date('Y-m-d'); ?></a>
-            <?php endwhile; else : ?>
-              <p><?php _e( 'Sorry, no pages found.' ); ?>
-            <?php endif; ?>
+                <a href="index.html" class="logo">Enjoy</a>
         <?php endif; ?>
   					</header>
 
