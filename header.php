@@ -12,16 +12,26 @@
 
   				<!-- Intro -->
   					<div id="intro" class="">
+              <!-- if is front page -->
   						<h1><?php the_field( 'hero_heading' ); ?></h1>
   						<p><?php the_field( 'hero_sub-headin' ); ?></p>
   						<ul class="actions">
   							<li><a href="#header" class="button icon solo fa-arrow-down scrolly">Continue</a></li>
   						</ul>
+              <!-- Elseif single.php -->
+
+              <!-- blog title and exerpt -->
+              <!-- endif -->
   					</div>
 
   				<!-- Header -->
   					<header id="header">
+              <!-- if is front page -->
   						<a href="index.html" class="logo"><?php the_field( 'logo_text' ); ?></a>
+              <!-- Elseif single.php -->
+
+              <!-- blog title and exerpt -->
+              <!-- endif -->
   					</header>
 
   				<!-- Nav -->
